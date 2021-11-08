@@ -5,20 +5,17 @@ const routes = [
   {
     path: '/changeLanguage',
     name: 'changeLanguage',
-    component: ChangeLanguage
+    component: () => import('../views/pages/ChangeLanguage.vue')
   },
   {
     path: '/registerRenderElem',
     name: 'registerRenderElem',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/RegisterRenderElem.vue')
+    component: () => import('../views/pages/RegisterRenderElem.vue')
   },
   {
     path: '/registerPlugin',
     name: 'registerPlugin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/RegisterPlugin.vue')
+    component: () => import('../views/pages/RegisterPlugin.vue')
   }
 ]
 
